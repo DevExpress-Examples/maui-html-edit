@@ -1,0 +1,96 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:local="clr-namespace:HtmlEditToolbarCustomization" x:Class="HtmlEditToolbarCustomization.MainPage" Title="Email">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="dxre_undo" Command="{Binding Commands.Undo, Source={x:Reference edit}}"/>
+        <ToolbarItem IconImageSource="dxre_redo" Command="{Binding Commands.Redo, Source={x:Reference edit}}"/>
+    </ContentPage.ToolbarItems>
+    <dx:SafeKeyboardAreaView x:Name="root" Closed="OnSafeKeyboardAreaViewClosed" BackgroundColor="{dx:ThemeColor SurfaceContainer}">
+        <dx:DXDockLayout>
+            <dxco:DXToolbar x:Name="toolbar" dx:DXDockLayout.Dock="Bottom">
+                <dxco:ToolbarNavigationButton Icon="dxre_text_settings" PageName="TextSettings" Clicked="OnShowTextSettingsClicked"/>
+                <dxco:ToolbarSeparator/>
+                <dxco:ToolbarToggleButton Icon="dxre_bold" Command="{Binding Commands.ToggleBold, Source={x:Reference edit}}" IsChecked="{Binding SelectedTextFontAttributes, Source={x:Reference edit}, Converter={local:EnumToBoolConverter}, ConverterParameter=Bold}}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_italic" Command="{Binding Commands.ToggleItalic, Source={x:Reference edit}}" IsChecked="{Binding SelectedTextFontAttributes, Source={x:Reference edit}, Converter={local:EnumToBoolConverter}, ConverterParameter=Italic}}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_underline" Command="{Binding Commands.ToggleUnderline, Source={x:Reference edit}}" IsChecked="{Binding SelectedTextDecorations, Source={x:Reference edit}, Converter={local:EnumToBoolConverter}, ConverterParameter=Underline}}"/>
+                <dxco:ToolbarButton Icon="dxre_hyperlink" Clicked="OnShowEmbedHyperlinkSettingsClicked" />
+                <dxco:ToolbarNavigationButton Icon="dxre_picture" PageName="EmbedImageSettings" Clicked="OnShowEmbedImageSettingsClicked"/>
+                <dxco:ToolbarNavigationButton Icon="dxre_text_color" PageName="TextColorSettings"/>
+                <dxco:ToolbarNavigationButton Icon="dxre_background_color" PageName="TextBackgroundColorSettings"/>
+                <dxco:ToolbarButton Icon="dxre_indent_left" Command="{Binding Commands.DecreaseIndent, Source={x:Reference edit}}"/>
+                <dxco:ToolbarButton Icon="dxre_indent_right" Command="{Binding Commands.IncreaseIndent, Source={x:Reference edit}}"/>
+                <dxco:ToolbarButton Icon="dxre_font_size_decrease" Command="{Binding Commands.DecreaseFontSize, Source={x:Reference edit}}"/>
+                <dxco:ToolbarButton Icon="dxre_font_size_increase" Command="{Binding Commands.IncreaseFontSize, Source={x:Reference edit}}"/>
+                <dxco:ToolbarNavigationButton Icon="dxre_line_spacing" PageName="ShowLineSpacingSettings"/>
+                <dxco:ToolbarButton Icon="dxre_font_family" Clicked="OnShowFontFamilySettingsClicked"/>
+
+                <dxco:ToolbarPage Name="TextColorSettings" ShowBackButton="false">
+                    <dxco:ToolbarNavigationButton Icon="dxre_arrow_back" Clicked="OnResetToolbarClicked"/>
+                    <dxco:ToolbarText Content="{dxhe:HtmlEditLocalizer Id=TextSettings_FontColor}"/>
+                    <dxco:ToolbarColorSelector SelectedColor="{Binding SelectedTextForeground, Source={x:Reference edit}}"/>
+                </dxco:ToolbarPage>
+
+                <dxco:ToolbarPage Name="TextBackgroundColorSettings" ShowBackButton="false">
+                    <dxco:ToolbarNavigationButton Icon="dxre_arrow_back" Clicked="OnResetToolbarClicked"/>
+                    <dxco:ToolbarText Content="{dxhe:HtmlEditLocalizer Id=TextSettings_BackgroundColor}"/>
+                    <dxco:ToolbarColorSelector SelectedColor="{Binding SelectedTextBackground, Source={x:Reference edit}}"/>
+                </dxco:ToolbarPage>
+
+                <dxco:ToolbarPage Name="ShowLineSpacingSettings" ShowBackButton="false">
+                    <dxco:ToolbarNavigationButton Icon="dxre_arrow_back" Clicked="OnResetToolbarClicked"/>
+                    <dxco:ToolbarToggleButton Content="1.0" IsChecked="{Binding SelectedTextLineHeight, Mode=OneWay, Converter={local:LineHeightToBoolConverter}, ConverterParameter=1.0, Source={x:Reference edit}}" Command="{Binding Commands.SetLineHeight, Source={x:Reference edit}}">
+                        <dxco:ToolbarToggleButton.CommandParameter>
+                            <dxhe:HtmlLineHeight>1.0</dxhe:HtmlLineHeight>
+                        </dxco:ToolbarToggleButton.CommandParameter>
+                    </dxco:ToolbarToggleButton>
+                    <dxco:ToolbarToggleButton Content="1.15" IsChecked="{Binding SelectedTextLineHeight, Mode=OneWay, Converter={local:LineHeightToBoolConverter}, ConverterParameter=1.15, Source={x:Reference edit}}" Command="{Binding Commands.SetLineHeight, Source={x:Reference edit}}">
+                        <dxco:ToolbarToggleButton.CommandParameter>
+                            <dxhe:HtmlLineHeight>1.15</dxhe:HtmlLineHeight>
+                        </dxco:ToolbarToggleButton.CommandParameter>
+                    </dxco:ToolbarToggleButton>
+                    <dxco:ToolbarToggleButton Content="1.5" IsChecked="{Binding SelectedTextLineHeight, Mode=OneWay, Converter={local:LineHeightToBoolConverter}, ConverterParameter=1.5, Source={x:Reference edit}}" Command="{Binding Commands.SetLineHeight, Source={x:Reference edit}}">
+                        <dxco:ToolbarToggleButton.CommandParameter>
+                            <dxhe:HtmlLineHeight>1.5</dxhe:HtmlLineHeight>
+                        </dxco:ToolbarToggleButton.CommandParameter>
+                    </dxco:ToolbarToggleButton>
+                    <dxco:ToolbarToggleButton Content="2.0" IsChecked="{Binding SelectedTextLineHeight, Mode=OneWay, Converter={local:LineHeightToBoolConverter}, ConverterParameter=2.0, Source={x:Reference edit}}" Command="{Binding Commands.SetLineHeight, Source={x:Reference edit}}">
+                        <dxco:ToolbarToggleButton.CommandParameter>
+                            <dxhe:HtmlLineHeight>2.0</dxhe:HtmlLineHeight>
+                        </dxco:ToolbarToggleButton.CommandParameter>
+                    </dxco:ToolbarToggleButton>
+                    <dxco:ToolbarToggleButton Content="2.5" IsChecked="{Binding SelectedTextLineHeight, Mode=OneWay, Converter={local:LineHeightToBoolConverter}, ConverterParameter=2.5, Source={x:Reference edit}}" Command="{Binding Commands.SetLineHeight, Source={x:Reference edit}}">
+                        <dxco:ToolbarToggleButton.CommandParameter>
+                            <dxhe:HtmlLineHeight>2.5</dxhe:HtmlLineHeight>
+                        </dxco:ToolbarToggleButton.CommandParameter>
+                    </dxco:ToolbarToggleButton>
+                    <dxco:ToolbarToggleButton Content="3.0" IsChecked="{Binding SelectedTextLineHeight, Mode=OneWay, Converter={local:LineHeightToBoolConverter}, ConverterParameter=3.0, Source={x:Reference edit}}" Command="{Binding Commands.SetLineHeight, Source={x:Reference edit}}">
+                        <dxco:ToolbarToggleButton.CommandParameter>
+                            <dxhe:HtmlLineHeight>3.0</dxhe:HtmlLineHeight>
+                        </dxco:ToolbarToggleButton.CommandParameter>
+                    </dxco:ToolbarToggleButton>
+                </dxco:ToolbarPage>
+
+                <dxco:ToolbarPage Name="TextSettings" ShowBackButton="false">
+                    <dxco:ToolbarNavigationButton Icon="dxre_arrow_back" Clicked="OnResetToolbarClicked"/>
+                    <dxco:ToolbarToggleButton Icon="dxre_bold" Command="{Binding Commands.ToggleBold, Source={x:Reference edit}}" IsChecked="{Binding SelectedTextFontAttributes, Source={x:Reference edit}, Converter={local:EnumToBoolConverter}, ConverterParameter=Bold}}"/>
+                    <dxco:ToolbarToggleButton Icon="dxre_italic" Command="{Binding Commands.ToggleItalic, Source={x:Reference edit}}" IsChecked="{Binding SelectedTextFontAttributes, Source={x:Reference edit}, Converter={local:EnumToBoolConverter}, ConverterParameter=Italic}}"/>
+                    <dxco:ToolbarToggleButton Icon="dxre_underline" Command="{Binding Commands.ToggleUnderline, Source={x:Reference edit}}" IsChecked="{Binding SelectedTextDecorations, Source={x:Reference edit}, Converter={local:EnumToBoolConverter}, ConverterParameter=Underline}}"/>
+                    <dxco:ToolbarToggleButton Icon="dxre_strikethrough" Command="{Binding Commands.ToggleStrikethrough, Source={x:Reference edit}}" IsChecked="{Binding SelectedTextDecorations, Source={x:Reference edit}, Converter={local:EnumToBoolConverter}, ConverterParameter=Strikethrough}}"/>
+                </dxco:ToolbarPage>
+
+                <dxco:ToolbarPage Name="EmbedImageSettings" ShowBackButton="false">
+                    <dxco:ToolbarNavigationButton Icon="dxre_arrow_back" Clicked="OnResetToolbarClicked"/>
+                    <dxco:ToolbarText Content="{dxhe:HtmlEditLocalizer Id=InsertImage_Title}"/>
+                </dxco:ToolbarPage>
+            </dxco:DXToolbar>
+            <dxhe:HtmlEdit x:Name="edit" ShowDefaultToolbar="false">
+                <dxhe:HtmlEdit.HtmlSource>
+                    <dxhe:UriHtmlSource Uri="mail.html" />
+                </dxhe:HtmlEdit.HtmlSource>
+            </dxhe:HtmlEdit>
+        </dx:DXDockLayout>
+    </dx:SafeKeyboardAreaView>
+</ContentPage>

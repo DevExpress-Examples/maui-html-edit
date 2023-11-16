@@ -1,0 +1,88 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+    xmlns:dxc="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
+    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:local="clr-namespace:HtmlEditToolbarCustomization"
+    x:Class="HtmlEditToolbarCustomization.TextFormatView" Padding="16,0,16,16">
+    <ContentView.Content>
+        <dx:DXStackLayout>
+            <dxco:DXToolbar>
+                <dxco:ToolbarToggleButton Icon="dxre_align_left" 
+                        IsChecked="{Binding Owner.SelectedTextHorizontalAlignment, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Left}}" 
+                        Command="{Binding Owner.Commands.ToggleLeftAlignment}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_align_center" 
+                        IsChecked="{Binding Owner.SelectedTextHorizontalAlignment, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Center}}"
+                        Command="{Binding Owner.Commands.ToggleCenterAlignment}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_align_right" 
+                        IsChecked="{Binding Owner.SelectedTextHorizontalAlignment, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Right}}" 
+                        Command="{Binding Owner.Commands.ToggleRightAlignment}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_h1"
+                        IsChecked="{Binding Owner.SelectedTextHeadingLevel, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Heading1}}"
+                        Command="{Binding Owner.Commands.SetHeadingLevel}" CommandParameter="{x:Static dxhe:HtmlHeadingLevel.Heading1}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_h2"
+                        IsChecked="{Binding Owner.SelectedTextHeadingLevel, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Heading2}}"
+                        Command="{Binding Owner.Commands.SetHeadingLevel}" CommandParameter="{x:Static dxhe:HtmlHeadingLevel.Heading2}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_h3"
+                        IsChecked="{Binding Owner.SelectedTextHeadingLevel, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Heading3}}"
+                        Command="{Binding Owner.Commands.SetHeadingLevel}" CommandParameter="{x:Static dxhe:HtmlHeadingLevel.Heading3}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_bullet_list"
+                        IsChecked="{Binding Owner.SelectedTextListType, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Bullet}}"
+                        Command="{Binding Owner.Commands.ToggleBulletList}"/>
+                <dxco:ToolbarToggleButton Icon="dxre_num_list"
+                        IsChecked="{Binding Owner.SelectedTextListType, Mode=OneWay, Converter={local:EnumToBoolConverter}, ConverterParameter=Ordered}}"
+                        Command="{Binding Owner.Commands.ToggleOrderedList}"/>
+            </dxco:DXToolbar>
+            
+            <dx:DXSeparator Orientation="Horizontal"/>
+            
+            <Label Text="{dxhe:HtmlEditLocalizer Id=TextSettings_FontSize}" FontSize="12" Margin="0,2,0,6" TextColor="{dx:ThemeColor OnSurfaceVariant}"/>
+            <dxco:DXToolbar>
+                <dxco:ToolbarToggleButton Content="8" 
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=8}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="8"/>
+                <dxco:ToolbarToggleButton Content="10"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=10}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="10"/>
+                <dxco:ToolbarToggleButton Content="12"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=12}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="12"/>
+                <dxco:ToolbarToggleButton Content="14"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=14}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="14"/>
+                <dxco:ToolbarToggleButton Content="16"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=16}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="16"/>
+                <dxco:ToolbarToggleButton Content="18"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=18}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="18"/>
+                <dxco:ToolbarToggleButton Content="20"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=20}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="20"/>
+                <dxco:ToolbarToggleButton Content="22"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=22}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="22"/>
+                <dxco:ToolbarToggleButton Content="24"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=24}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="24"/>
+                <dxco:ToolbarToggleButton Content="26"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=26}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="26"/>
+                <dxco:ToolbarToggleButton Content="28"
+                        IsChecked="{Binding FontSize, Mode=OneWay, Converter={local:IntToBoolConverter}, ConverterParameter=28}}"
+                        Command="{Binding SetFontSizeCommand}" CommandParameter="28"/>
+            </dxco:DXToolbar>
+
+            <dx:DXSeparator Orientation="Horizontal"/>
+
+            <dxe:ChoiceChipGroup  Margin="0" Padding="0,16" ChipFontSize="14"
+                        SelectedItem="{Binding SelectedColorTarget}"
+                        ItemsSource="{Binding ColorTargets}"                        
+                        DisplayMember="DisplayName"/>
+            
+            <dx:DXColorSelector ItemsSource="{Binding DefaultColors}" SelectedColor="{Binding Color}"/>           
+        </dx:DXStackLayout>
+    </ContentView.Content>
+</ContentView>

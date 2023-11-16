@@ -1,0 +1,20 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:local="clr-namespace:HtmlEditToolbarCustomization" x:Class="HtmlEditToolbarCustomization.EmbedImageSettingsView">
+    <ContentView.Resources>
+        <Style TargetType="dxe:FormItem">
+            <Setter Property="HorizontalSpacing" Value="16"/>
+            <Setter Property="AllowTap" Value="true"/>
+            <Setter Property="Padding" Value="16,10"/>
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <dx:DXStackLayout>
+            <dxe:FormItem ImageSource="dxre_photo" InlineContent="{dxhe:HtmlEditLocalizer Id=InsertImage_TakePhoto}" TapCommand="{Binding ShowPhotoPickerCommand}" />
+            <dxe:FormItem ImageSource="dxre_picture" InlineContent="{dxhe:HtmlEditLocalizer Id=InsertImage_UploadFromLibrary}" TapCommand="{Binding ShowImagePickerCommand}" />
+        </dx:DXStackLayout>
+    </ContentView.Content>
+</ContentView>
