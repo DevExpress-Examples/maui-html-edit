@@ -1,6 +1,6 @@
 # DevExpress .NET MAUI HTML Edit - Display a DOCX File Content
 
-This example uses the [DevExpress Word Processing Document API](https://docs.devexpress.com/OfficeFileAPI/402993/word-processing-document-api/html-import-and-export#export-to-html) to convert a DOCX file to HTML and then displays it in the **HTML Edit** Control.
+This example uses the [DevExpress Word Processing Document API](https://docs.devexpress.com/OfficeFileAPI/402993/word-processing-document-api/html-import-and-export#export-to-html) to convert a DOCX file to HTML and display it in the **HTML Edit** Control.
 
 <img src="https://docs.devexpress.com/MAUI/images/html-edit/html-edit-overview@2x.png?v=23.2" width="30%"/>
 
