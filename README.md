@@ -10,7 +10,7 @@ The HtmlEdit control is a rich text editor that uses HTML as an input or output 
 * [LoadDataFromDocx](CS/LoadDataFromDocx/README.md)
 * [ReplicateBuiltInToolbar](CS/ReplicateBuiltInToolbar/README.md)
 
-![DevExpress .NET MAUI HTML Edit](https://docs.devexpress.com/MAUI/images/html-edit/html-edit-overview.png?v=23.2)
+<img src="https://docs.devexpress.com/MAUI/images/html-edit/html-edit-overview.png?v=23.2" width="30%"/>
 
 ## Documentation
 

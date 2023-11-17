@@ -4,7 +4,7 @@ The DevExpress **HTML Edit** control for .NET MAUI includes a built-in [DXToolba
 * Decreases the height of the HTML Edit when you open the device keyboard and keep the toolbar visible. In other words, avoids an overlap between the keyboard and the toolbar.
 * Displays custom content in the keyboard area to add more space for UI elements.
 
-![DevExpress .NET MAUI HTML Edit - Custom Panel in the Keyboard Area](https://docs.devexpress.com/MAUI/images/core/safekeyboardareaview.png?v=23.2)
+<img src="https://docs.devexpress.com/MAUI/images/core/safekeyboardareaview@2x.png?v=23.2" width="30%"/>
 
 ## Files to Review
 
