@@ -8,16 +8,16 @@ The DevExpress **HTML Edit** control for .NET MAUI includes a built-in [DXToolba
 
 ## Files to Review
 
-- [MainPage.xaml](CS/MainPage.xaml)
-- [MainPage.xaml.cs](CS/MainPage.xaml.cs)
-- [EmbedImageSettingsView.xaml](CS/Views/EmbedImageSettingsView.xaml)
-- [EmbedImageSettingsViewModel.cs](CS/ViewModels/EmbedImageSettingsViewModel.cs)
-- [FontFamilySettingsView.xaml](CS/Views/FontFamilySettingsView.xaml)
-- [FontFamilySettingsViewModel.cs](CS/ViewModels/FontFamilySettingsViewModel.cs)
-- [HyperlinkSettingsView.xaml](CS/Views/HyperlinkSettingsView.xaml)
-- [HyperlinkSettingsViewModel.cs](CS/ViewModels/HyperlinkSettingsViewModel.cs)
-- [TextFormatView.xaml](CS/Views/TextFormatView.xaml)
-- [TextFormatViewModel.cs](CS/ViewModels/TextFormatViewModel.cs)
+- [MainPage.xaml](MainPage.xaml)
+- [MainPage.xaml.cs](MainPage.xaml.cs)
+- [EmbedImageSettingsView.xaml](Views/EmbedImageSettingsView.xaml)
+- [EmbedImageSettingsViewModel.cs](ViewModels/EmbedImageSettingsViewModel.cs)
+- [FontFamilySettingsView.xaml](Views/FontFamilySettingsView.xaml)
+- [FontFamilySettingsViewModel.cs](ViewModels/FontFamilySettingsViewModel.cs)
+- [HyperlinkSettingsView.xaml](Views/HyperlinkSettingsView.xaml)
+- [HyperlinkSettingsViewModel.cs](ViewModels/HyperlinkSettingsViewModel.cs)
+- [TextFormatView.xaml](Views/TextFormatView.xaml)
+- [TextFormatViewModel.cs](ViewModels/TextFormatViewModel.cs)
 
 ## Documentation
 
