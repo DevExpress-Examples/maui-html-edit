@@ -306,3 +306,8 @@ TesterMetadata.xml
 
 # Local server for npm packages
 .npmrc
+
+*.Refs.csproj
+convacfg.json
+CS/ReplicateBuiltInToolbar/.meteor
+.meteor

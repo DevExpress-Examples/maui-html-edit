@@ -24,6 +24,14 @@ public partial class MainPage : ContentPage {
         }
     }
 
+    protected override bool OnBackButtonPressed() {
+        if (this.root.IsOpened) {
+            _ = ResetToolbar();
+            return true;
+        }
+        return base.OnBackButtonPressed();
+    }
+
     void OnShowFontFamilySettingsClicked(object sender, EventArgs e) {
         FontFamilySettingsViewModel vm = new (this.edit, NavigateToEditPage);
         FontFamilyView = FontFamilyView ?? new FontFamilySettingsView();
@@ -73,7 +81,11 @@ public partial class MainPage : ContentPage {
         ClearKeyboardArea();
     }
 
-    async void OnResetToolbarClicked(object sender, EventArgs e) {
+    void OnResetToolbarClicked(object sender, EventArgs e) {
+        _ = ResetToolbar();
+    }
+    
+    async Task ResetToolbar() {
         this.edit.AllowUserInput = true;
         this.edit.Focus();
         this.toolbar.SelectedPageName = null;
@@ -82,6 +94,7 @@ public partial class MainPage : ContentPage {
             ClearKeyboardArea();
         }
     }
+
     void ClearKeyboardArea() {
         if (this.root.KeyboardAreaContent == null)
             return;
