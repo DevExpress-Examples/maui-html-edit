@@ -86,7 +86,7 @@
                     <dxco:ToolbarText Content="{dxhe:HtmlEditLocalizer Id=InsertImage_Title}"/>
                 </dxco:ToolbarPage>
             </dxco:DXToolbar>
-            <dxhe:HtmlEdit x:Name="edit" ShowDefaultToolbar="false">
+            <dxhe:HtmlEdit x:Name="edit" ShowToolbar="false">
                 <dxhe:HtmlEdit.HtmlSource>
                     <dxhe:UriHtmlSource Uri="mail.html" />
                 </dxhe:HtmlEdit.HtmlSource>
