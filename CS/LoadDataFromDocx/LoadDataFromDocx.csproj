@@ -36,16 +36,17 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.*" />
     <PackageReference Include="DevExpress.Maui.HtmlEditor" Version="23.2.*" />
     <PackageReference Include="DevExpress.Maui.Editors" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Data" Version="23.2.*" />
     <PackageReference Include="DevExpress.Maui.Core" Version="23.2.*" />
     <PackageReference Include="DevExpress.Maui.CollectionView" Version="23.2.*" />
     <PackageReference Include="DevExpress.Maui.Controls" Version="23.2.*" />
     <PackageReference Include="DevExpress.Document.Processor" Version="23.2.*" />
     <PackageReference Include="DevExpress.Drawing.Skia" Version="23.2.*" />
     <PackageReference Include="SkiaSharp" Version="2.88.6" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.6" />
-    <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.6" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.7" />
+    <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.7" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="7.3.0" />
-    <PackageReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="SkiaSharp.NativeAssets.iOS" Version="2.88.6" />
-    <PackageReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" Include="SkiaSharp.NativeAssets.Android" Version="2.88.6" />
+    <PackageReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="SkiaSharp.NativeAssets.iOS" Version="2.88.7" />
+    <PackageReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" Include="SkiaSharp.NativeAssets.Android" Version="2.88.7" />
   </ItemGroup>
 </Project>
