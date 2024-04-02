@@ -7,7 +7,6 @@ namespace PropertyDescriptionHTMLEdit.Models;
 
 public class Property : BindableBase
 {
-    // private ObservableCollection<PropertyItem> items;
 
     [JsonPropertyName("ID")] public int Id { get; set; }
     [JsonPropertyName("Address")] public string Address { get; set; }
@@ -16,7 +15,6 @@ public class Property : BindableBase
     [JsonPropertyName("HouseSize")] public int HouseSize { get; set; }
     [JsonPropertyName("LotSize")] public double LotSize { get; set; }
     [JsonPropertyName("Price")] public int Price { get; set; }
-    // [JsonPropertyName("Features")] public string Features { get; set; }
 
     private string features;
     [JsonPropertyName("Features")]
