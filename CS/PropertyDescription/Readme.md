@@ -2,7 +2,7 @@
 
 This example uses a DataGridView to display a list of real estate properties for sale. Each item in the list has an associated description in HTML format. When you view or edit individual property details, the DevExpress [HTML Edit Control](https://docs.devexpress.com/MAUI/404635) displays the formatted description.
 
-<img src="images/property-description-overview@2x.png" width="50%"/>
+<img src="images/property-description-overview@2x.png" width="30%"/>
 
 ## Implementation Details
 
