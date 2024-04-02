@@ -58,12 +58,6 @@ public class PropertyViewModel : BindableBase
         IsDataLoading = true;
 
         var json = await FileSystem.OpenAppPackageFileAsync("Homes.json");
-        // StreamReader reader = new StreamReader(json);
-        // string line = "";
-        // while ((line = reader.ReadLine()) != null)
-        // {
-        //     Console.WriteLine(line);
-        // }
         Items = await JsonSerializer.DeserializeAsync<ObservableCollection<Property>>(json, Options);
         IsDataLoading = false;
 

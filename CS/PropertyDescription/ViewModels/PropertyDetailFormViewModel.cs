@@ -1,6 +1,5 @@
 using System.Collections.ObjectModel;
 using DevExpress.Maui.Core;
-// using PropertyDescriptionHTMLEdit.DataLayer;
 using PropertyDescriptionHTMLEdit.Models;
 
 namespace PropertyDescriptionHTMLEdit.ViewModels;
