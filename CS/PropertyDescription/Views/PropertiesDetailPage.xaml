@@ -28,7 +28,7 @@
         <Label Text="{Binding Item.LotSize, StringFormat='Lot Size: {0} acres'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurface}" Grid.Row="3" Margin="16,4,0,0"/>
         <Label Text="{Binding Item.YearBuilt, StringFormat='Year Built: {0}'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurface}" Grid.Row="4" Margin="16,4,0,0"/>
         <Grid ColumnDefinitions="*, Auto" Grid.Row="5" Margin="16,4,0,16">
-            <Label Text="{Binding Item.Price, StringFormat='{0} $'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurfaceVariant}" />
+            <Label Text="{Binding Item.Price, StringFormat='${0:N0}'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurfaceVariant}" />
             <dx:DXBorder BackgroundColor="{Binding Item.Status, Converter={StaticResource statusToColorConverter}, ConverterParameter={x:Single 0.2}}" HorizontalOptions="End" CornerRadius="100" Grid.Column="1" Padding="8,2" Margin="0,0,16,0" >
                 <Label Text="{Binding Item.PropertyStatus}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurfaceVariant}" Grid.Column="1"/>
             </dx:DXBorder>

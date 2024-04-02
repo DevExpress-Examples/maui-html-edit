@@ -39,7 +39,7 @@
                                     </HorizontalStackLayout>
 
                                     <Grid ColumnDefinitions="*, Auto">
-                                        <Label Text="{Binding Item.Price, StringFormat='{0}$'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurface}"/>
+                                        <Label Text="{Binding Item.Price, StringFormat='${0:N0}'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurface}"/>
                                         <dx:DXBorder BackgroundColor="{Binding Item.Status, Converter={StaticResource statusToColorConverter}, ConverterParameter={x:Single 0.2}}" CornerRadius="100" Grid.Column="1" Padding="8,2">
                                             <Label Text="{Binding Item.PropertyStatus}" FontSize="16" HorizontalOptions="End" TextColor="{dx:ThemeColor Key=OnSurfaceVariant}" Grid.Column="1"/>
                                         </dx:DXBorder>
