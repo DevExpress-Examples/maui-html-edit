@@ -1,14 +1,14 @@
 # DevExpress .NET MAUI HTML Edit - Edit HTML in DataGridView CRUD Views
 
-This scenario uses the [HTML Edit Control](https://docs.devexpress.com/MAUI/404635) to show and edit HTML markup of the selected DataGridView item.
+This example uses a DataGridView to display a list of real estate properties for sale. Each item in the list has an associated description in HTML format. When you view or edit individual property details, the DevExpress [HTML Edit Control](https://docs.devexpress.com/MAUI/404635) displays the formatted description.
 
 <img src="images/property-description-overview@2x.png?v=23.2" width="50%"/>
 
 ## Implementation Details
 
-* In this scenario, the HTML Edit control is displayed in the [DataGridView](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)'s Detail and Edit [CRUD forms](https://docs.devexpress.com/MAUI/404456/data-grid/crud/customize-detail-forms). You can use the [DetailFormTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.DetailFormTemplate) and [DetailEditFormTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.DetailEditFormTemplate) properties to define the page that is used to view and edit the selected DataGridView's item.
-* Set the [HtmlEdit.IsReadOnly](https://docs.devexpress.com/MAUI/404635/html-edit/html-edit#html-edit-availability) to true to disable editing.
-* Use the [HtmlEdit.GetHtmlAsync](https://docs.devexpress.com/MAUI/404637/html-edit/load-and-obtain-markup#retrieve-the-displayed-content) method to obtain the HTML Edit content. After that, you can save it to a property on the [OnNavigatingFrom](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom?view=winrt-22621) event.
+* The HTML Edit control is part of [DataGridView](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)'s Detail and Edit [CRUD forms](https://docs.devexpress.com/MAUI/404456/data-grid/crud/customize-detail-forms). You can use [DetailFormTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.DetailFormTemplate) and [DetailEditFormTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.DetailEditFormTemplate) properties to define pages that display and edit the selected DataGridView item.
+* Set the [HtmlEdit.IsReadOnly](https://docs.devexpress.com/MAUI/404635/html-edit/html-edit#html-edit-availability) property to `true` to disable editing.
+* Use the [HtmlEdit.GetHtmlAsync](https://docs.devexpress.com/MAUI/404637/html-edit/load-and-obtain-markup#retrieve-the-displayed-content) method to obtain the current HTML markup from the editor. You can save it to the associated property on the [OnNavigatingFrom](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom?view=winrt-22621) event.
 
 ## Files to Review
 
