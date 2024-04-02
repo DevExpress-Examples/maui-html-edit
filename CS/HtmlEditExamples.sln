@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadDataFromDocx", "LoadDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlEditToolbarCustomization", "ReplicateBuiltInToolbar\HtmlEditToolbarCustomization.csproj", "{49B14BCA-22CD-472D-8F58-543F577D9740}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyDescriptionHTMLEdit", "PropertyDescription\PropertyDescriptionHTMLEdit.csproj", "{47C222FE-1FD9-4D41-8085-97C5355E3EDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +30,11 @@ Global
 		{49B14BCA-22CD-472D-8F58-543F577D9740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49B14BCA-22CD-472D-8F58-543F577D9740}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49B14BCA-22CD-472D-8F58-543F577D9740}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

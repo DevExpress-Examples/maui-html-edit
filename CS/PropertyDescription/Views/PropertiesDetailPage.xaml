@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PropertyDescriptionHTMLEdit.Views.PropertiesDetailPage"
+    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+    xmlns:dxc="clr-namespace:DevExpress.Maui.Charts;assembly=DevExpress.Maui.Charts"
+    xmlns:dxcv="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
+    xmlns:dxsch="clr-namespace:DevExpress.Maui.Scheduler;assembly=DevExpress.Maui.Scheduler"
+    xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+    xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+    xmlns:dxgauge="clr-namespace:DevExpress.Maui.Gauges;assembly=DevExpress.Maui.Gauges"
+    xmlns:dxpdf="clr-namespace:DevExpress.Maui.Pdf;assembly=DevExpress.Maui.Pdf"
+    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls" Title="Property Details"
+    xmlns:helpers="clr-namespace:PropertyDescriptionHTMLEdit.Helpers">
+    <ContentPage.Resources>
+        <helpers:StatusToColorConverter x:Key="statusToColorConverter"/>
+    </ContentPage.Resources>
+    <Grid BackgroundColor="{dx:ThemeColor Key=SurfaceContainer}" IgnoreSafeArea="True" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, *">
+        <dx:DXImage Source="{Binding Image}" Grid.Row="0"/>
+        <Label Text="{Binding Item.Address}" FontSize="18" FontAttributes="Bold" TextColor="{dx:ThemeColor Key=OnSurface}" Grid.Row="1" Margin="16,16,16,4"/>
+        <HorizontalStackLayout Grid.Row="2" Margin="16,4,0,0">
+            <Label Text="{Binding Item.Beds, StringFormat='{0} Beds,'}" TextColor="{dx:ThemeColor Key=OnSurface}" FontSize="16"/>
+            <Label Text="{Binding Item.Baths, StringFormat=' {0} Baths,'}" TextColor="{dx:ThemeColor Key=OnSurface}" FontSize="16" />
+            <Label Text="{Binding Item.HouseSize, StringFormat=' {0} SqFt'}" TextColor="{dx:ThemeColor Key=OnSurface}" FontSize="16" />
+        </HorizontalStackLayout>
+        <Label Text="{Binding Item.LotSize, StringFormat='Lot Size: {0} acres'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurface}" Grid.Row="3" Margin="16,4,0,0"/>
+        <Label Text="{Binding Item.YearBuilt, StringFormat='Year Built: {0}'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurface}" Grid.Row="4" Margin="16,4,0,0"/>
+        <Grid ColumnDefinitions="*, Auto" Grid.Row="5" Margin="16,4,0,16">
+            <Label Text="{Binding Item.Price, StringFormat='${0:N0}'}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurfaceVariant}" />
+            <dx:DXBorder BackgroundColor="{Binding Item.Status, Converter={StaticResource statusToColorConverter}, ConverterParameter={x:Single 0.2}}" HorizontalOptions="End" CornerRadius="100" Grid.Column="1" Padding="8,2" Margin="0,0,16,0" >
+                <Label Text="{Binding Item.PropertyStatus}" FontSize="16" TextColor="{dx:ThemeColor Key=OnSurfaceVariant}" Grid.Column="1"/>
+            </dx:DXBorder>
+        </Grid>
+
+        <Grid Grid.Row="6">
+            <dxhe:HtmlEdit IsReadOnly="true" AllowUserInput="False" BorderColor="{dx:ThemeColor Tertiary}" BorderThickness="0">
+                <dxhe:HtmlEdit.HtmlSource>
+                    <dxhe:StringHtmlSource Text="{Binding Item.Features}"/>
+                </dxhe:HtmlEdit.HtmlSource>
+            </dxhe:HtmlEdit>
+            <dx:DXButton Icon="edit" IconColor="Black" FontSize="20" VerticalOptions="Start" HorizontalOptions="End" MinimumWidthRequest="56" HeightRequest="56" Command="{Binding EditCommand}" BackgroundColor="Transparent" CornerRadius="16" />
+        </Grid>
+    </Grid>
+</ContentPage>
