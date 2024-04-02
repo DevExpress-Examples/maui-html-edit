@@ -15,11 +15,10 @@ public static class MauiProgram {
             .UseDevExpress(useLocalization: true)            
             .ConfigureFonts(fonts => {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("univia-pro-regular.ttf", "Univia-Pro");
                 fonts.AddFont("roboto-bold.ttf", "Roboto-Bold");
                 fonts.AddFont("roboto-regular.ttf", "Roboto");
-            })
-            .UseMauiCompatibility();
+            });
+
 
         return builder.Build();
     }
