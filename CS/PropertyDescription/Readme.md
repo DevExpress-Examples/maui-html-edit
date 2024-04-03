@@ -13,7 +13,7 @@ This example uses a DataGridView to display a list of real estate properties for
 ## Files to Review
 
 - [PropertiesDetailPage.xaml](Views/PropertiesDetailPage.xaml)
-- [PropertyDescriptionEditView.xaml](Views/PropertyDescriptionEditView.xaml.xaml)
+- [PropertyDescriptionEditView.xaml](Views/PropertyDescriptionEditView.xaml)
 - [PropertyDescriptionEditView.xaml.cs](Views/PropertyDescriptionEditView.xaml.cs)
 
 ## Documentation
