@@ -13,6 +13,7 @@ The HtmlEdit control is a rich text editor that uses HTML as an input or output 
 
 <img src="https://docs.devexpress.com/MAUI/images/html-edit/html-edit-overview.png?v=23.2" width="30%"/>
 
+
 ## Documentation
 
 - [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview?v=23.2)
