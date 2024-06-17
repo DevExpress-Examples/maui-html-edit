@@ -1,14 +1,11 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
-    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-    xmlns:dxc="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
-    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:dx="http://schemas.devexpress.com/maui"
     xmlns:local="clr-namespace:HtmlEditToolbarCustomization" x:Class="HtmlEditToolbarCustomization.HyperlinkSettingsView" Padding="24">
     <ContentView.Content>
         <dx:DXStackLayout ItemSpacing="24">
-            <dxe:TextEdit Text="{Binding Text, Mode=TwoWay}" LabelText="{dxhe:HtmlEditLocalizer Id=InsertHyperlink_LinkName}"/>
-            <dxe:TextEdit Text="{Binding Url, Mode=TwoWay}" LabelText="{dxhe:HtmlEditLocalizer Id=InsertHyperlink_LinkAddress}"/>
+            <dx:TextEdit Text="{Binding Text, Mode=TwoWay}" LabelText="{dx:HtmlEditLocalizer Id=InsertHyperlink_LinkName}"/>
+            <dx:TextEdit Text="{Binding Url, Mode=TwoWay}" LabelText="{dx:HtmlEditLocalizer Id=InsertHyperlink_LinkAddress}"/>
         </dx:DXStackLayout>
     </ContentView.Content>
 </ContentView>

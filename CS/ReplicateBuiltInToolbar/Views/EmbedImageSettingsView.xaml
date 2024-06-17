@@ -1,11 +1,9 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
-    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:dx="http://schemas.devexpress.com/maui"
     xmlns:local="clr-namespace:HtmlEditToolbarCustomization" x:Class="HtmlEditToolbarCustomization.EmbedImageSettingsView">
     <ContentView.Resources>
-        <Style TargetType="dxe:FormItem">
+        <Style TargetType="dx:FormItem">
             <Setter Property="HorizontalSpacing" Value="16"/>
             <Setter Property="AllowTap" Value="true"/>
             <Setter Property="Padding" Value="16,10"/>
@@ -13,8 +11,8 @@
     </ContentView.Resources>
     <ContentView.Content>
         <dx:DXStackLayout>
-            <dxe:FormItem ImageSource="dxre_photo" InlineContent="{dxhe:HtmlEditLocalizer Id=InsertImage_TakePhoto}" TapCommand="{Binding ShowPhotoPickerCommand}" />
-            <dxe:FormItem ImageSource="dxre_picture" InlineContent="{dxhe:HtmlEditLocalizer Id=InsertImage_UploadFromLibrary}" TapCommand="{Binding ShowImagePickerCommand}" />
+            <dx:FormItem ImageSource="dxre_photo" InlineContent="{dx:HtmlEditLocalizer Id=InsertImage_TakePhoto}" TapCommand="{Binding ShowPhotoPickerCommand}" />
+            <dx:FormItem ImageSource="dxre_picture" InlineContent="{dx:HtmlEditLocalizer Id=InsertImage_UploadFromLibrary}" TapCommand="{Binding ShowImagePickerCommand}" />
         </dx:DXStackLayout>
     </ContentView.Content>
 </ContentView>

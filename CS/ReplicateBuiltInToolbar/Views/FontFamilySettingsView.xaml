@@ -1,9 +1,6 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
-    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-    xmlns:dxc="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
-    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:dx="http://schemas.devexpress.com/maui"
     xmlns:local="clr-namespace:HtmlEditToolbarCustomization" x:Class="HtmlEditToolbarCustomization.FontFamilySettingsView">
     <ContentView.Resources>
         <Style TargetType="Label">
@@ -17,20 +14,20 @@
         </Style>
     </ContentView.Resources>
     <ContentView.Content>
-        <dxc:DXCollectionView ItemsSource="{Binding FontFamilies}" SelectedItem="{Binding FontFamily, Mode=TwoWay}" SelectionMode="Single">
-            <dxc:DXCollectionView.ItemTemplate>
+        <dx:DXCollectionView ItemsSource="{Binding FontFamilies}" SelectedItem="{Binding FontFamily, Mode=TwoWay}" SelectionMode="Single">
+            <dx:DXCollectionView.ItemTemplate>
                 <DataTemplate>
                     <Label Text="{Binding .}"/>
                 </DataTemplate>
-            </dxc:DXCollectionView.ItemTemplate>
-            <dxc:DXCollectionView.SelectedItemTemplate>
+            </dx:DXCollectionView.ItemTemplate>
+            <dx:DXCollectionView.SelectedItemTemplate>
                 <DataTemplate>
                     <dx:DXDockLayout>
                         <Label Text="{Binding .}"/>
                         <dx:DXImage Source="dxre_check"/>
                     </dx:DXDockLayout>
                 </DataTemplate>
-            </dxc:DXCollectionView.SelectedItemTemplate>
-        </dxc:DXCollectionView>
+            </dx:DXCollectionView.SelectedItemTemplate>
+        </dx:DXCollectionView>
     </ContentView.Content>
 </ContentView>

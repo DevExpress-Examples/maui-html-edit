@@ -12,6 +12,15 @@ public static class MauiProgram {
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseDevExpressCollectionView()
+            .UseDevExpressControls()
+            .UseDevExpressHtmlEditor()
+            .UseDevExpressEditors()
+            .UseDevExpressDataGrid()
+            .UseDevExpressCharts()
+            .UseDevExpressGauges()
+            .UseDevExpressPdf()
+            .UseDevExpressScheduler()
             .UseDevExpress(useLocalization: true)            
             .ConfigureFonts(fonts => {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

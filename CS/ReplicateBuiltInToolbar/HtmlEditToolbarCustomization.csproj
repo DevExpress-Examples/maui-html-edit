@@ -31,13 +31,13 @@
     <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.*" />
-    <PackageReference Include="DevExpress.Maui.HtmlEditor" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.Editors" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.Core" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.CollectionView" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.Controls" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.HtmlEditor" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Core" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.CollectionView" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.*" />
   </ItemGroup>
 </Project>

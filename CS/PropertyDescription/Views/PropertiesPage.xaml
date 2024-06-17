@@ -1,16 +1,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
-    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
-    xmlns:dxc="clr-namespace:DevExpress.Maui.Charts;assembly=DevExpress.Maui.Charts"
-    xmlns:dxcv="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
-    xmlns:dxsch="clr-namespace:DevExpress.Maui.Scheduler;assembly=DevExpress.Maui.Scheduler"
-    xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-    xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
-    xmlns:dxgauge="clr-namespace:DevExpress.Maui.Gauges;assembly=DevExpress.Maui.Gauges"
-    xmlns:dxpdf="clr-namespace:DevExpress.Maui.Pdf;assembly=DevExpress.Maui.Pdf"
-    xmlns:dxhe="clr-namespace:DevExpress.Maui.HtmlEditor;assembly=DevExpress.Maui.HtmlEditor"
+    xmlns:dx="http://schemas.devexpress.com/maui"
     xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
     xmlns:views="clr-namespace:PropertyDescriptionHTMLEdit.Views"
     xmlns:helpers="clr-namespace:PropertyDescriptionHTMLEdit.Helpers" ios:Page.UseSafeArea="true" x:Class="PropertyDescriptionHTMLEdit.Views.PropertiesPage" Title="Available Property">
@@ -18,13 +8,13 @@
         <helpers:StatusToColorConverter x:Key="statusToColorConverter"/>
     </ContentPage.Resources>
     <Grid BackgroundColor="{dx:ThemeColor Key=Surface}">
-        <dxg:DataGridView x:Name="dataGrid" ItemsSource="{Binding Items}" SelectionMode="None" SelectedItem="{Binding SelectedProperty, Mode=TwoWay}" IsColumnHeaderVisible="False" DetailFormTemplate="{DataTemplate views:PropertiesDetailPage}" CreateDetailFormViewModel="OnCreateDetailFormViewModel" DetailEditFormTemplate="{DataTemplate views:PropertyDescriptionEditView}">
-            <dxg:DataGridView.CellAppearance>
-                <dxg:CellAppearance BackgroundColor="Transparent" HorizontalLineThickness="0" SelectionColor="Transparent"/>
-            </dxg:DataGridView.CellAppearance>
-            <dxg:DataGridView.Columns>
-                <dxg:TemplateColumn>
-                    <dxg:TemplateColumn.DisplayTemplate>
+        <dx:DataGridView x:Name="dataGrid" ItemsSource="{Binding Items}" SelectionMode="None" SelectedItem="{Binding SelectedProperty, Mode=TwoWay}" IsColumnHeaderVisible="False" DetailFormTemplate="{DataTemplate views:PropertiesDetailPage}" CreateDetailFormViewModel="OnCreateDetailFormViewModel" DetailEditFormTemplate="{DataTemplate views:PropertyDescriptionEditView}">
+            <dx:DataGridView.CellAppearance>
+                <dx:CellAppearance BackgroundColor="Transparent" HorizontalLineThickness="0" SelectionColor="Transparent"/>
+            </dx:DataGridView.CellAppearance>
+            <dx:DataGridView.Columns>
+                <dx:TemplateColumn>
+                    <dx:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <dx:DXButton Command="{Binding Source={x:Reference dataGrid}, Path=Commands.ShowDetailForm}" CommandParameter="{Binding Item}" CornerRadius="14" BackgroundColor="{dx:ThemeColor Key=SurfaceContainer}" PressedBackgroundColor="{dx:ThemeColor Key=SecondaryContainer}" Margin="16,8" Padding="8,0" HorizontalContentAlignment="Fill">
                                 <dx:DXStackLayout Padding="8,16,8,12" ItemSpacing="8" ItemAlignment="FillUniform">
@@ -47,9 +37,9 @@
                                 </dx:DXStackLayout>
                             </dx:DXButton>
                         </DataTemplate>
-                    </dxg:TemplateColumn.DisplayTemplate>
-                </dxg:TemplateColumn>
-            </dxg:DataGridView.Columns>
-        </dxg:DataGridView>
+                    </dx:TemplateColumn.DisplayTemplate>
+                </dx:TemplateColumn>
+            </dx:DataGridView.Columns>
+        </dx:DataGridView>
     </Grid>
 </ContentPage>
