@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HTMLtoMD"
+             xmlns:dx="http://schemas.devexpress.com/maui"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             x:Class="HTMLtoMD.MainPage">
+
+<dx:SafeKeyboardAreaView>
+    <dx:DXDockLayout>
+            <dx:DXToolbar x:Name="toolbar" dx:DXDockLayout.Dock="Bottom" Height="50" BackgroundColor="LightGray" Padding="10,0,10,0" SelectedPageName="htmlPage">
+                <dx:ToolbarPage Name="mdPage" ShowBackButton="false">
+                    <dx:ToolbarSeparator Placement="FixedRight" />
+                    <dx:ToolbarButton Icon="md" IconColor="{dx:ThemeColor Key=OnPrimary}" Placement="FixedRight" BackgroundColor="{dx:ThemeColor Key=Primary}" Margin="0,2,0,2" Clicked="SwitchToHtml" />
+                </dx:ToolbarPage>
+                <dx:ToolbarPage Name="htmlPage" ShowBackButton="false">
+                    <dx:ToolbarButton Command="{Binding Source={x:Reference html}, Path=Commands.ToggleBold}" Icon="bold" />
+                    <dx:ToolbarButton Command="{Binding Source={x:Reference html}, Path=Commands.ToggleItalic}" Icon="italic" />
+                    <dx:ToolbarButton Command="{Binding Source={x:Reference html}, Path=Commands.SetHeadingLevel}" CommandParameter="{x:Static dx:HtmlHeadingLevel.Heading1}" Icon="h1" />
+                    <dx:ToolbarButton Command="{Binding Source={x:Reference html}, Path=Commands.SetHeadingLevel}" CommandParameter="{x:Static dx:HtmlHeadingLevel.Heading1}" Icon="h2" />
+                    <dx:ToolbarButton Command="{Binding Source={x:Reference html}, Path=Commands.SetHeadingLevel}" CommandParameter="{x:Static dx:HtmlHeadingLevel.Heading1}" Icon="h3" />
+                    <dx:ToolbarSeparator Placement="FixedRight" />
+                    <dx:ToolbarButton Icon="html" IconColor="{dx:ThemeColor Key=OnPrimary}" Placement="FixedRight" BackgroundColor="{dx:ThemeColor Key=Primary}" Margin="0,2,0,2" Clicked="SwitchToMd"/>
+                </dx:ToolbarPage>
+            </dx:DXToolbar>
+            <dx:HtmlEdit x:Name="html" ShowToolbar="False"/>
+            <Editor x:Name="mdEditor" IsVisible="false" />
+    </dx:DXDockLayout>
+</dx:SafeKeyboardAreaView>
+</ContentPage>
