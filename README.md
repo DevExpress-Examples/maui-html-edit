@@ -12,6 +12,7 @@ The HtmlEdit control is a rich text editor that uses HTML as an input or output 
 * [ReplicateBuiltInToolbar](CS/ReplicateBuiltInToolbar/README.md)
 * [Edit HTML in DataGridView CRUD Views](CS/PropertyDescription/Readme.md)
 * [Covert HTML <-> Markdown](CS/HtmlToMarkdown/README.md)
+* [Use OpenAI GPT to Enhance Texts](CS/AIAssistant/README.md)
 
 <img src="https://docs.devexpress.com/MAUI/images/html-edit/html-edit-overview.png?v=23.2" width="30%"/>
 
