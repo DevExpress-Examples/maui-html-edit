@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:HtmlEditTextAssistant" x:Class="HtmlEditTextAssistant.MainPage"
+    xmlns:dx="http://schemas.devexpress.com/maui"
+    Appearing="OnPageAppearing">
+    <dx:SafeKeyboardAreaView>
+        <Grid RowDefinitions="*,Auto">
+            <dx:HtmlEdit x:Name="htmledit" ShowToolbar="false" dx:DXDockLayout.Dock="Top"/>
+            <dx:DXToolbar Grid.Row="1">
+                <dx:ToolbarNavigationButton Content="&#x1FA84;" PageName="AIAssistant" />
+                <dx:ToolbarPage Name="AIAssistant" ShowBackButton="true">
+                    <dx:ToolbarButton Content="Fix Grammar ✨" Clicked="OnFixGrammarClick"/>
+                    <dx:ToolbarButton Content="Enhance 🪄" Clicked="OnEnhanceClick"/>
+                </dx:ToolbarPage>
+            </dx:DXToolbar>
+        </Grid>
+    </dx:SafeKeyboardAreaView>
+</ContentPage>

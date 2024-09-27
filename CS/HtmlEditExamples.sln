@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyDescriptionHTMLEdit
 EndProject
 Project("{E961052D-65AF-4B5A-9551-542BDC263D2D}") = "HTMLtoMD", "HtmlToMarkdown\HTMLtoMD.csproj", "{E961052D-65AF-4B5A-9551-542BDC263D2D}"
 EndProject
+Project("{F6439B70-002D-48B5-810D-F6A147BEF0FB}") = "HTMLtoMD", "AIAssistant\HtmlEditTextAssistant.csproj", "{F6439B70-002D-48B5-810D-F6A147BEF0FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,11 @@ Global
 		{E961052D-65AF-4B5A-9551-542BDC263D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E961052D-65AF-4B5A-9551-542BDC263D2D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E961052D-65AF-4B5A-9551-542BDC263D2D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlEditTextAssistant", "HtmlEditTextAssistant.csproj", "{F6439B70-002D-48B5-810D-F6A147BEF0FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6439B70-002D-48B5-810D-F6A147BEF0FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66881042-245D-4DB4-B538-A697378E57BB}
+	EndGlobalSection
+EndGlobal
