@@ -1,6 +1,6 @@
 # DevExpress .NET MAUI HTML Edit - Use OpenAI GPT to Enhance Texts
 
-This example uses the GPT to enhance and check grammar of the **HTML Edit** control's content. Please note that you need to specify your OpenAI API Key in the [MainPage.xaml.cs](MainPage.xaml.cs) file.
+This example uses a GPT model available in OpenAI to enhance and check grammar of the **HTML Edit** control's content. Please note that you need to specify your OpenAI API Key in the [MainPage.xaml.cs](MainPage.xaml.cs) file.
 
 <img src="html-edit-ai-assistant.png" width="30%"/>
 
