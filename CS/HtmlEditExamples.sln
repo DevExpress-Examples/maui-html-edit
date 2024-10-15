@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyDescriptionHTMLEdit
 EndProject
 Project("{E961052D-65AF-4B5A-9551-542BDC263D2D}") = "HTMLtoMD", "HtmlToMarkdown\HTMLtoMD.csproj", "{E961052D-65AF-4B5A-9551-542BDC263D2D}"
 EndProject
-Project("{F6439B70-002D-48B5-810D-F6A147BEF0FB}") = "HTMLtoMD", "AIAssistant\HtmlEditTextAssistant.csproj", "{F6439B70-002D-48B5-810D-F6A147BEF0FB}"
+Project("{F6439B70-002D-48B5-810D-F6A147BEF0FB}") = "HtmlEditTextAssistant", "AIAssistant\HtmlEditTextAssistant.csproj", "{F6439B70-002D-48B5-810D-F6A147BEF0FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
