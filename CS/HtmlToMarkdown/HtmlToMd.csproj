@@ -26,9 +26,6 @@
     <PackageReference Include="ReverseMarkdown" Version="4.3.0" />
     <PackageReference Include="Markdig" Version="0.36.2" />
     <PackageReference Include="MarkedNet" Version="2.1.4" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
     <PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*" />
     <PackageReference Include="DevExpress.Maui.HtmlEditor" Version="24.1.*" />
   </ItemGroup>
