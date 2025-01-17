@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+    <TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <RootNamespace>HTMLtoMD</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -9,8 +9,9 @@
     <ApplicationId>com.companyname.htmltomd</ApplicationId>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
-    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.2</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
+    <MauiVersion>9.0.10</MauiVersion>
   </PropertyGroup>
   <ItemGroup>
     <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -27,6 +28,6 @@
     <PackageReference Include="Markdig" Version="0.36.2" />
     <PackageReference Include="MarkedNet" Version="2.1.4" />
     <PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*" />
-    <PackageReference Include="DevExpress.Maui.HtmlEditor" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.HtmlEditor" Version="24.2.*" />
   </ItemGroup>
 </Project>
