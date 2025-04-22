@@ -36,7 +36,7 @@
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="DevExpress.Maui.HtmlEditor" Version="24.2.*" />
     <PackageReference Include="DevExpress.Maui.Editors" Version="24.2.*" />
-    <PackageReference Include="DevExpress.Maui.Core" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Maui.Core" Version="24.2.*" /> 
     <PackageReference Include="DevExpress.Maui.CollectionView" Version="24.2.*" />
     <PackageReference Include="DevExpress.Maui.Controls" Version="24.2.*" />
   </ItemGroup>
