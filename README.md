@@ -6,7 +6,7 @@
 <!-- default badges end -->
 # DevExpress HTML Edit Control for .NET MAUI
 
-The HtmlEdit control is a rich text editor that uses HTML as an input or output format. The built-in adaptive [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview?v=23.2) control includes commands that edit and format content. The repository includes the following examples:
+The HtmlEdit control is a rich text editor that uses HTML as an input or output format. The built-in adaptive [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview) control includes commands that edit and format content. The repository includes the following examples:
 
 * [LoadDataFromDocx](CS/LoadDataFromDocx/README.md)
 * [ReplicateBuiltInToolbar](CS/ReplicateBuiltInToolbar/README.md)
@@ -19,8 +19,8 @@ The HtmlEdit control is a rich text editor that uses HTML as an input or output 
 
 ## Documentation
 
-- [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview?v=23.2)
-- [HTML Edit Control](https://docs.devexpress.com/MAUI/404635/html-edit/html-edit?v=23.2)
+- [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview)
+- [HTML Edit Control](https://docs.devexpress.com/MAUI/404635/html-edit/html-edit)
 
 ## More Examples
 
