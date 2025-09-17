@@ -1,10 +1,10 @@
 # DevExpress .NET MAUI HTML Edit - Replicate a Built-In Toolbar
 
-The DevExpress **HTML Edit** control for .NET MAUI includes a built-in [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview?v=23.2). This example replicates the **HTML Edit**'s built-in toolbar in XAML and uses a [SafeKeyboardAreaView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.SafeKeyboardAreaView?v=23.2&) container. This class helps you achieve the following:
+The DevExpress **HTML Edit** control for .NET MAUI includes a built-in [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview). This example replicates the **HTML Edit**'s built-in toolbar in XAML and uses a [SafeKeyboardAreaView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.SafeKeyboardAreaView) container. This class helps you achieve the following:
 * Decreases the height of the HTML Edit when you open the device keyboard and keep the toolbar visible. In other words, avoids an overlap between the keyboard and the toolbar.
 * Displays custom content in the keyboard area to add more space for UI elements.
 
-<img src="https://docs.devexpress.com/MAUI/images/core/safekeyboardareaview@2x.png?v=23.2" width="30%"/>
+<img src="https://docs.devexpress.com/MAUI/images/core/safekeyboardareaview@2x.png" width="30%"/>
 
 ## Files to Review
 
@@ -21,9 +21,9 @@ The DevExpress **HTML Edit** control for .NET MAUI includes a built-in [DXToolba
 
 ## Documentation
 
-- [SafeKeyboardAreaView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.SafeKeyboardAreaView?v=23.2)
-- [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview?v=23.2)
-- [HTML Edit - Create a Custom Toolbar](https://docs.devexpress.com/MAUI/404639/html-edit/toolbar?v=23.2)
+- [SafeKeyboardAreaView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.SafeKeyboardAreaView)
+- [DXToolbar Control](https://docs.devexpress.com/MAUI/404604/dialogs-menu-and-navigation/toolbar/toolbar-overview)
+- [HTML Edit - Create a Custom Toolbar](https://docs.devexpress.com/MAUI/404639/html-edit/toolbar)
 
 ## More Examples
 
