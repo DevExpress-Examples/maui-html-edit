@@ -14,7 +14,7 @@ The HtmlEdit control is a rich text editor that uses HTML as an input or output 
 * [Covert HTML <-> Markdown](CS/HtmlToMarkdown/README.md)
 * [Use OpenAI GPT to Enhance Texts](CS/AIAssistant)
 
-<img src="https://docs.devexpress.com/MAUI/images/html-edit/html-edit-overview.png?v=23.2" width="30%"/>
+<img src="https://docs.devexpress.com/MAUI/images/html-edit/html-edit-overview.png" width="30%"/>
 
 
 ## Documentation
@@ -44,3 +44,4 @@ The HtmlEdit control is a rich text editor that uses HTML as an input or output 
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
