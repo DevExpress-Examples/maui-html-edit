@@ -18,8 +18,8 @@ This example uses a DataGridView to display a list of real estate properties for
 
 ## Documentation
 
-- [HTML Edit Overview](https://docs.devexpress.com/MAUI/404635?v=23.2)
-- [HTML Edit - Load and Retrieve Content](https://docs.devexpress.com/MAUI/404637/html-edit/load-and-obtain-markup?v=23.2)
+- [HTML Edit Overview](https://docs.devexpress.com/MAUI/404635)
+- [HTML Edit - Load and Retrieve Content](https://docs.devexpress.com/MAUI/404637/html-edit/load-and-obtain-markup)
 - [Featured Scenarios](https://docs.devexpress.com/MAUI/404291/scenarios)
 
 ## More Examples
